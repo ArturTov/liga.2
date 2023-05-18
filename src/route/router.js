@@ -1,77 +1,77 @@
-import { Outlet, Route, createBrowserRouter } from "react-router-dom";
-import Roote from "./roote";
+import { Outlet, Route, createBrowserRouter } from 'react-router-dom';
+import Roote from './roote';
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Roote />,
-    errorElement: <div>errror</div>,
+    // errorElement: <div>errror</div>,
     children: [
       {
         index: true,
         element: <>afvhgnagsdb</>,
       },
       {
-        path: "registration",
+        path: 'registration',
         element: <>registration</>,
-        action: () => "asd",
+        action: () => 'asd',
       },
-      { path: "login", element: "login" },
-      { path: "reset", element: "reset" },
-      { path: "work_sheet", element: "reset" },
-      { path: "support", element: "login" },
+      { path: 'login', element: 'login' },
+      { path: 'reset', element: 'reset' },
+      { path: 'work_sheet', element: 'reset' },
+      { path: 'support', element: 'login' },
       {
-        path: "my_orders",
+        path: 'my_orders',
         element: <Outlet />,
         children: [
-          { element: "my", index: true },
+          { element: 'my', index: true },
           {
-            path: ":id",
-            element: "id",
+            path: ':id',
+            element: 'id',
           },
         ],
       },
-      { path: "balance", element: "reset" },
+      { path: 'balance', element: 'reset' },
       {
-        path: "orders",
+        path: 'orders',
         element: <Outlet />,
         children: [
           {
             index: true,
-            element: "orders",
+            element: 'orders',
           },
           {
-            path: ":id",
-            element: "id",
+            path: ':id',
+            element: 'id',
           },
         ],
       },
-      { path: "notification", element: "notification" },
-      { path: "chat", element: "reset" },
-      { path: "documents", element: "login" },
-      { path: "terms_of_use", element: "reset" },
-      { path: "public_offer", element: "reset" },
-      { path: "privacy_policy", element: "login" },
-      { path: "user_information/:id'", element: "reset" },
+      { path: 'notification', element: 'notification' },
+      { path: 'chat', element: 'reset' },
+      { path: 'documents', element: 'login' },
+      { path: 'terms_of_use', element: 'reset' },
+      { path: 'public_offer', element: 'reset' },
+      { path: 'privacy_policy', element: 'login' },
+      { path: "user_information/:id'", element: 'reset' },
       {
-        path: "find_specialists",
+        path: 'find_specialists',
         element: <Outlet />,
         children: [
           {
             index: true,
-            element: "find_specialists",
+            element: 'find_specialists',
           },
           {
-            path: ":id",
-            element: "fdsigycxzhk",
+            path: ':id',
+            element: 'fdsigycxzhk',
           },
         ],
       },
 
-      { path: "payment_methods", element: "login" },
-      { path: "search_works/:id", element: "reset" },
-      { path: "question", element: "reset" },
-      { path: "documents_all", element: "reset" },
-      { path: "*", element: "dsjhkbmnsd" },
+      { path: 'payment_methods', element: 'login' },
+      { path: 'search_works/:id', element: 'reset' },
+      { path: 'question', element: 'reset' },
+      { path: 'documents_all', element: 'reset' },
+      { path: '*', element: 'dsjhkbmnsd' },
     ],
   },
 ]);
